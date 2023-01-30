@@ -1,0 +1,7 @@
+baseURL = 'https://www.mkmba.nz/'
+languageCode = 'en-us'
+title = 'MKMBA Ltd. Solving real problems with technology.'
+theme = 'default'
+
+[build]
+    writeStats = true
