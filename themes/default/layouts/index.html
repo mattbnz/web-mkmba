@@ -1,3 +1,77 @@
 {{ define "contentwrap" }}
-Hello
+<div class="bg-[#102542] text-center py-60">
+  <div class="mx-auto my-auto text-[#F8F0FB] text-4xl md:text-9xl">MKMBA Limited</div>
+  <div class="mx-auto my-auto text-[#F8F0FB] text-2xl mt-5">Solving real problems with technology</div>
+</div>
+<div class="bg-[#F8F0FB] text-center py-20 text-xl px-5 lg:px-60">
+  <p class="py-4">
+    MKMBA is a family owned NZ company.
+
+    Our vision is that technology contributes direct and meaningful impact to solving real problems in our world.
+  </p>
+  <p class="py-4">
+    To realise this vision we build and operate distributed software systems that
+    deliver new opportunities for individuals, businesses and communities to solve the real problems in their community.
+  </p>
+</div>
+<div class="text-[#102542] py-10 px-5 lg:px-60">
+  <div class="text-4xl mt-10">Products</div>
+  <div class="py-10 grid grid-cols-1 md:grid-cols-3">
+    <div class="px-10 my-auto pb-10 md:pb-0">
+      <a href="https://co2mon.nz/"><img src="/co2mon_logo.png"></a>
+    </div>
+    <div class="col-span-2">
+      <p class="pb-10 font-bold">Lower sickness rates and improve cognitive performance by enabling every indoor space to benefit from
+         continuous ventilation monitoring and reporting.</p>
+
+      <p class="pb-10"><a class="font-bold underline decoration-dashed underline-offset-8 hover:text-[#C95654]" href="https://co2mon.nz/">co2mon.nz</a> provides a unified hardware and software solution to enable continuous
+      monitoring and reporting of ventilation quality through the measurement of CO2 in the air.</p>
+      <p class="pb-10">Available today for schools, homes, offices, retail, hospitality and any other indoor space, co2mon.nz's solution
+        provides an affordable and effective way to reduce sickness and improve cognitive performance in your indoor spaces.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="bg-[#F8F0FB] py-10 px-5 lg:px-60">
+  <div class="py-10">
+    <div>
+      <p class="pb-10 font-bold">More coming soon!</p>
+
+      <p class="pb-10">
+        We're working on an <a class="font-bold underline decoration-dashed underline-offset-8 hover:text-[#C95654]" href="https://www.mattb.nz/w/2023/01/27/goals-for-2023/">exciting pipeline of product development goals</a>
+         for 2023 and expect to launch further products here soon.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="text-[#102542] py-10 px-5 lg:px-60">
+  <div class="text-4xl mt-10">Consulting</div>
+  <div class="py-10 grid grid-cols-1 md:grid-cols-3">
+    <div class="pb-10 md:pb-0 text-center">
+      <a href="https://www.mattb.nz/">
+        {{- with resources.Get "matt-headshot-20170208-small.jpg" }}
+          <img src="{{ .RelPermalink }}" alt="Rounded avatar"  class="w-1/3 mx-auto rounded-full" >
+        {{end}}
+      </a>
+    </div>
+    <div class="col-span-2">
+      <p class="pb-10 font-bold">
+        With over 20 years experience leading and developing distributed software systems, Matt Brown has the skills to
+        solve your business problems.</p>
+
+      <p class="pb-10">Matt provides a full range of consulting services with a focus on SRE/Devops leadership,
+        distributed systems architecture and general technology strategy.
+        Visit <a class="font-bold underline decoration-dashed underline-offset-8 hover:text-[#C95654]" href="https://www.mattb.nz/">https://www.mattb.nz/</a> for more details and to read Matt's writing on a
+        range of topics.</p>
+      <p class="pb-3">Book a no-obligation 30 minute chat with Matt below to get started.</p>
+      <a href="https://zcal.co/mattb/lets-chat" target="_blank"
+  type="button"
+  class="border border-[#FFCF9C] bg-[#FFCF9C] hover:border-[#FF9C33] text-[#102542] font-bold rounded-md px-4 py-2 m-2"
+>
+Book a 30 min VC
+  </a>
+    </div>
+  </div>
+</div>
 {{ end }}
