@@ -8,3 +8,10 @@ theme = 'default'
 
 [params]
     MetricsHost = "https://metrics.mkmba.nz"
+
+[deployment]
+
+[[deployment.targets]]
+    name = 's3'
+    URL = 's3://mkmba.nz?region=ap-southeast-2&profile=mkmba.nz-hugo'
+    cloudFrontDistributionID = 'EJV46D3CJ929Q'
