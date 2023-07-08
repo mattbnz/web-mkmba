@@ -5,3 +5,6 @@ theme = 'default'
 
 [build]
     writeStats = true
+
+[params]
+    MetricsHost = "https://metrics.mkmba.nz"

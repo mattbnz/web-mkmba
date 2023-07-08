@@ -1,0 +1,5 @@
+<script type="module">
+  import * as metrics from "{{ site.Params.MetricsHost }}/js/client.js";
+
+  metrics.SetupMetrics("{{ site.Params.MetricsHost }}", 60);
+</script>
