@@ -14,9 +14,32 @@
   <div class="text-4xl mt-10">Products</div>
   <div class="py-10 grid grid-cols-1 md:grid-cols-3">
     <div class="px-10 my-auto pb-10 md:pb-0">
-      <a href="https://co2mon.nz/"><img src="/co2mon_logo.png"></a>
+      <a href="https://oncall-optimizer.com/">
+        {{- with resources.Get "oncall-optimizer.png" }}
+          <img src="{{ .RelPermalink }}"></a>
+        {{ end }}
     </div>
     <div class="col-span-2">
+      <p class="font-bold">Hassle free on-call scheduling; Supporting software teams to operate on-call rotations that
+        deliver growth in expertise.</p>
+
+      <p class="py-5">For too many software teams on-call is seen as a duty that burdens individuals on the team and takes time
+        away from productive work. The resulting cycle of minimal investment leading to unpleasant on-call experiences results in
+        on-call being seen as the worst aspect of the job for many software engineers.
+      </p>
+
+      <p class="pb-5">It doesn't have to be that way. In well managed teams,
+        <a class="font-bold underline decoration-dashed underline-offset-8 hover:text-[#C95654]" href="https://www.mattb.nz/w/2023/08/16/on-call-is-an-opportunity/">on-call is an opportunity</a>
+        for growth and learning to occur, but achieving that outcome is hard with the current tools available to teams.</p>
+
+      <p class="pb-5">
+        <a class="font-bold underline decoration-dashed underline-offset-8 hover:text-[#C95654]" href="https://oncall-optimizer.com/">On-Call Optimizer</a>
+        provides simple, easy to use tooling that integrates with the existing products and workflows used by software teams to support and encourage
+        the development of a team environment where on-call is not a burden and growth and learning can occur.
+      </p>
+    </div>
+
+    <div class="col-span-2 mt-40">
       <p class="pb-10 font-bold">Lower sickness rates and improve cognitive performance by enabling every indoor space to benefit from
          continuous ventilation monitoring and reporting.</p>
 
@@ -26,22 +49,13 @@
         provides an affordable and effective way to reduce sickness and improve cognitive performance in your indoor spaces.
       </p>
     </div>
-  </div>
-</div>
-<div class="bg-[#F8F0FB] py-10 px-5 lg:px-60">
-  <div class="py-10">
-    <div>
-      <p class="pb-10 font-bold">More coming soon!</p>
-
-      <p class="pb-10">
-        We're working on an <a class="font-bold underline decoration-dashed underline-offset-8 hover:text-[#C95654]" href="https://www.mattb.nz/w/2023/01/27/goals-for-2023/">exciting pipeline of product development goals</a>
-         for 2023 and expect to launch further products here soon.</p>
+    <div class="px-10 my-auto pb-10 md:pb-0">
+      <a href="https://co2mon.nz/"><img src="/co2mon_logo.png"></a>
     </div>
-
   </div>
 </div>
 
-<div class="text-[#102542] py-10 px-5 lg:px-60">
+<div class="bg-[#F8F0FB] text-[#102542] py-10 px-5 lg:px-60">
   <div class="text-4xl mt-10">Consulting</div>
   <div class="py-10 grid grid-cols-1 md:grid-cols-3">
     <div class="pb-10 md:pb-0 text-center">
