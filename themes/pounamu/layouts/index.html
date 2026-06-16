@@ -137,10 +137,16 @@
         <a class="chip" href="mailto:hello@mkmba.nz">email: help@mkmba.nz</a>        
       </div>
     </div>
-    <form class="form" action="mailto:hello@mkmba.nz" method="post" enctype="text/plain">
+    <form class="form" id="contact-form"
+          data-endpoint="{{ strings.TrimSuffix "/" site.Params.MetricsHost }}/contact"
+          action="mailto:hello@mkmba.nz" method="post" enctype="text/plain">
       <div class="field">
         <label class="field__label" for="cf-name">Your name</label>
         <input class="input" id="cf-name" name="name" type="text" placeholder="Jordan Smith" required>
+      </div>
+      <div class="field">
+        <label class="field__label" for="cf-org">Organisation <span class="field__opt">(optional)</span></label>
+        <input class="input" id="cf-org" name="org" type="text" placeholder="Company / team">
       </div>
       <div class="field">
         <label class="field__label" for="cf-email">Email</label>
@@ -150,10 +156,24 @@
         <label class="field__label" for="cf-problem">What are you trying to solve?</label>
         <input class="input" id="cf-problem" name="problem" type="text" placeholder="A short description…" required>
       </div>
+      {{/* Honeypot — hidden from people, tempting to bots. Real users leave it blank. */}}
+      <div class="cf-hp" aria-hidden="true">
+        <label for="cf-company">Company</label>
+        <input id="cf-company" name="company" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <p class="form__error" id="cf-error" hidden>Something went wrong — please email <a href="mailto:hello@mkmba.nz">hello@mkmba.nz</a>.</p>
       <div style="margin-top:4px;">
-        <button type="submit" class="btn btn--primary btn--lg">Send {{ $arrowLg | safeHTML }}</button>
+        <button type="submit" class="btn btn--primary btn--lg" id="cf-submit">
+          <span class="btn__label">Send</span>{{ $arrowLg | safeHTML }}
+        </button>
       </div>
     </form>
+    <div class="form form__success" id="cf-success" hidden>
+      <h3 class="form__success-title">Thanks — we'll be in touch.</h3>
+      <p class="form__success-body">Your message is on its way to the team. We'll get back to you at the email you provided.</p>
+    </div>
+    {{- $cf := resources.Get "js/contact.js" | minify | fingerprint -}}
+    <script src="{{ $cf.RelPermalink }}" defer></script>
   </div>
 </section>
 {{ end }}
