@@ -1,0 +1,7 @@
+name = "Pounamu"
+license = "MIT"
+description = "MKMBA 'Pounamu' marketing theme — terracotta + pounamu green on warm paper. Built from the Claude Design handoff."
+min_version = "0.110.0"
+
+[author]
+  name = "MKMBA Limited"

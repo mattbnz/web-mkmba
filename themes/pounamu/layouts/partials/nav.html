@@ -1,0 +1,15 @@
+{{- $arrow := `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>` -}}
+<header class="nav">
+  <a href="/" class="brand" aria-label="MKMBA home">
+    <span class="brand__mark">M</span>
+    <span class="brand__word">MKMBA</span>
+  </a>
+  <nav class="nav__links">
+    <a href="/" class="nav__link{{ if .IsHome }} nav__link--active{{ end }}">Home</a>
+    <a href="/#what-we-build" class="nav__link">Our Software</a>
+    <a href="/#how-we-work" class="nav__link">Approach</a>
+    <a href="/#contact" class="nav__link">Contact</a>
+  </nav>
+  <span class="nav__spacer"></span>
+  <a href="/#contact" class="btn btn--primary btn--sm">Get in touch{{ $arrow | safeHTML }}</a>
+</header>
