@@ -1,0 +1,159 @@
+{{ define "main" }}
+{{- $arrowLg := `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px;"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>` -}}
+{{- $arrowSm := `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>` -}}
+
+<!-- HERO — dark, centered, mark-forward -->
+<section class="hero">
+  <svg class="hero__motif" viewBox="0 0 1280 380" preserveAspectRatio="xMidYMax slice" fill="none" aria-hidden="true" focusable="false">
+    <path d="M-20 246 C 200 198, 480 168, 760 188 S 1120 150, 1300 168" stroke="var(--green-300)" stroke-width="1.6" opacity="0.30"></path>
+    <path d="M-20 284 C 220 234, 500 204, 780 222 S 1130 186, 1300 204" stroke="var(--green-300)" stroke-width="1.8" opacity="0.40"></path>
+    <path d="M-20 320 C 240 270, 520 238, 800 256 S 1140 222, 1300 240" stroke="var(--green-400)" stroke-width="1.8" opacity="0.50"></path>
+    <path d="M-20 352 C 250 302, 545 272, 822 290 S 1150 258, 1300 276" stroke="#C2A06A" stroke-width="2" opacity="0.42"></path>
+    <path d="M-20 382 C 262 332, 565 304, 842 320 S 1162 290, 1300 308" stroke="var(--terra-300)" stroke-width="2" opacity="0.40"></path>
+    <path d="M-20 410 C 280 360, 588 334, 862 350 S 1175 322, 1300 340" stroke="var(--green-500)" stroke-width="2.2" opacity="0.50"></path>
+  </svg>
+  <div class="hero__inner">
+    <span class="hero__mark">M</span>
+    <div class="hero__eyebrow">Distributed software systems &middot; Aotearoa NZ</div>
+    <h1 class="hero__title">Software that solves your problems</h1>
+    <p class="hero__lead">A family-owned New Zealand company with a vision for technology to contribute direct, meaningful impact to solving real problems in our world.</p>
+    <div class="hero__actions">
+      <a href="#what-we-build" class="btn btn--primary btn--lg">Our software{{ $arrowLg | safeHTML }}</a>
+      <a href="#how-we-work" class="link-arrow">Our approach{{ $arrowSm | safeHTML }}</a>
+    </div>
+  </div>
+  <div class="hero__rule"></div>
+</section>
+
+<!-- WHAT WE BUILD — accented product cards -->
+<section id="what-we-build" class="section">
+  <div class="container">
+    <div class="section__head">
+      <div class="eyebrow">Our Software</div>
+      <h2 class="section__title">Simplicity delivered.</h2>
+      <p class="section__lead">No unnecessary features. Just the core value, solving real problems for real people.</p>
+    </div>
+    <div class="cards-3">
+
+      <a class="card card__link" href="https://oncall-optimizer.com/">
+        <div class="card__accent" style="background:var(--slice-2);"></div>
+        <div class="card__body">
+          <div class="card__top">
+            <div class="card__icon card__icon--green">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+            </div>
+            <span class="card__sys">SaaS</span>
+          </div>
+          <h3 class="card__title">On-Call Optimizer</h3>
+          <p class="card__desc">Hassle-free on-call scheduling. Schedules teams actually want, incidents routed to the right people, and on-call turned from a burden into an opportunity for growth.</p>
+          <span class="status status--ok"><span class="status__dot"></span>Accepting customers</span>
+        </div>
+      </a>
+
+      <a class="card card__link" href="https://co2mon.nz/">
+        <div class="card__accent" style="background:var(--slice-5);"></div>
+        <div class="card__body">
+          <div class="card__top">
+            <div class="card__icon card__icon--terra">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6"></path></svg>
+            </div>
+            <span class="card__sys">Saas / Hardware</span>
+          </div>
+          <h3 class="card__title">co2mon.nz</h3>
+          <p class="card__desc">Indoor air-quality monitoring for NZ classrooms, homes and workplaces. Live CO&#8322; readings and simple alerts &mdash; real ventilation data to cut sickness and lift performance.</p>
+          <span class="status status--warn"><span class="status__dot"></span>Supported &middot; legacy</span>
+        </div>
+      </a>
+
+      <a class="card card__link" href="https://www.mattb.nz/">
+        <div class="card__accent" style="background:var(--info-600);"></div>
+        <div class="card__body">
+          <div class="card__top">
+            <div class="card__icon card__icon--info">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"></path></svg>
+            </div>
+            <span class="card__sys">In Person</span>
+          </div>
+          <h3 class="card__title">Advisory</h3>
+          <p class="card__desc">Hands-on help designing, building and operating distributed systems &mdash; SRE/DevOps leadership, architecture and technology strategy, from first design to production at scale.</p>
+          <span class="status status--info"><span class="status__dot"></span>Available</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK — distinct cards -->
+<section id="how-we-work" class="work">
+  <div class="container">
+    <div class="work__head">
+      <div class="eyebrow">Our Approach</div>
+      <h2 class="section__title">Open, honest and reliable.</h2>
+      <p class="section__lead">
+        We want to see individuals, businesses and communities continuing to use our software to solve the real problems in their community
+        over many, many years. We approach everything via the following principles:
+      </p>
+    </div>
+    <div class="cards-4">
+      <div class="work-card">
+        <div class="work-card__bar" style="background:var(--slice-1);"></div>
+        <div class="work-card__num">01</div>
+        <h4 class="work-card__title">Relationship first</h4>
+        <p class="work-card__desc">We get to know each other so we understand your problems and where software can help.</p>
+      </div>
+      <div class="work-card">
+        <div class="work-card__bar" style="background:var(--slice-2);"></div>
+        <div class="work-card__num">02</div>
+        <h4 class="work-card__title">Quality Guaranteed</h4>
+        <p class="work-card__desc">Engineered for reliability, simple software that's easy to use and resilient when unexpected challenges arise.</p>
+      </div>
+      <div class="work-card">
+        <div class="work-card__bar" style="background:var(--slice-4);"></div>
+        <div class="work-card__num">03</div>
+        <h4 class="work-card__title">Fairly Priced</h4>
+        <p class="work-card__desc">Delivering real value to you and ensuring our independence from the whims of venture capital.</p>
+      </div>
+      <div class="work-card">
+        <div class="work-card__bar" style="background:var(--slice-5);"></div>
+        <div class="work-card__num">04</div>
+        <h4 class="work-card__title">Sustainable</h4>
+        <p class="work-card__desc">We're putting our name to solving problems, not creating more, both
+          now and for years to come.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT — inverted dark band -->
+<section id="contact" class="contact">
+  <div class="container contact__grid">
+    <div>
+      <div class="eyebrow" style="color:var(--terra-400);">Get in touch</div>
+      <h2 class="contact__title">Need a problem solved?</h2>
+      <p class="contact__lead">Tell us about it. We work with organisations across the globe who need distributed software systems built 
+        reliably and run sustainably.</p>
+      <div class="contact__chips">
+        <a class="chip" href="mailto:hello@mkmba.nz">email: help@mkmba.nz</a>        
+      </div>
+    </div>
+    <form class="form" action="mailto:hello@mkmba.nz" method="post" enctype="text/plain">
+      <div class="field">
+        <label class="field__label" for="cf-name">Your name</label>
+        <input class="input" id="cf-name" name="name" type="text" placeholder="Jordan Smith" required>
+      </div>
+      <div class="field">
+        <label class="field__label" for="cf-email">Email</label>
+        <input class="input" id="cf-email" name="email" type="email" placeholder="jordan@company.com" required>
+      </div>
+      <div class="field">
+        <label class="field__label" for="cf-problem">What are you trying to solve?</label>
+        <input class="input" id="cf-problem" name="problem" type="text" placeholder="A short description…" required>
+      </div>
+      <div style="margin-top:4px;">
+        <button type="submit" class="btn btn--primary btn--lg">Send {{ $arrowLg | safeHTML }}</button>
+      </div>
+    </form>
+  </div>
+</section>
+{{ end }}
