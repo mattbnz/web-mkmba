@@ -1,0 +1,11 @@
+{
+  "name": "MKMBA Limited",
+  "short_name": "MKMBA",
+  "icons": [
+    { "src": "/favicon-64.png", "sizes": "64x64", "type": "image/png" },
+    { "src": "/favicon.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#23362B",
+  "background_color": "#F5F0E8",
+  "display": "standalone"
+}
